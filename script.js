@@ -6,28 +6,26 @@
         SCROLL SUAVE DO MENU
 ==============================================*/
 
-document.querySelectorAll('nav a').forEach(link => {
+const linksMenu = document.querySelectorAll('nav a');
 
-    link.addEventListener('click', function(e){
+linksMenu.forEach(link => {
+    link.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
 
-        const destino = document.querySelector(this.getAttribute('href'));
+        if (href && href.startsWith("#")) {
+            const destino = document.querySelector(href);
 
-        if(destino){
+            if (destino) {
+                e.preventDefault();
 
-            e.preventDefault();
-
-            destino.scrollIntoView({
-
-                behavior:"smooth"
-
-            });
-
+                destino.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
         }
-
     });
-
 });
-
 
 /*==============================================
             NAVBAR AO ROLAR
@@ -35,53 +33,41 @@ document.querySelectorAll('nav a').forEach(link => {
 
 const navbar = document.querySelector("nav");
 
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY > 80){
-
-        navbar.style.background="rgba(11,17,32,.98)";
-
-        navbar.style.boxShadow="0 8px 20px rgba(0,0,0,.3)";
-
-    }
-
-    else{
-
-        navbar.style.background="rgba(11,17,32,.90)";
-
-        navbar.style.boxShadow="none";
-
-    }
-
-});
+if (navbar) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 80) {
+            navbar.style.background = "rgba(11,17,32,.98)";
+            navbar.style.boxShadow = "0 8px 20px rgba(0,0,0,.35)";
+            navbar.style.backdropFilter = "blur(12px)";
+        } else {
+            navbar.style.background = "rgba(11,17,32,.90)";
+            navbar.style.boxShadow = "none";
+            navbar.style.backdropFilter = "blur(8px)";
+        }
+    });
+}
 
 /*==============================================
             EFEITO DIGITAÇÃO
 ==============================================*/
 
-const texto = "Analista de Business Intelligence";
-
+const textoDigitado = "Analista de Business Intelligence";
 const subtitulo = document.querySelector(".hero h2");
 
-let i = 0;
+if (subtitulo) {
+    let i = 0;
+    subtitulo.textContent = "";
 
-subtitulo.textContent="";
-
-function escrever(){
-
-    if(i < texto.length){
-
-        subtitulo.textContent += texto.charAt(i);
-
-        i++;
-
-        setTimeout(escrever,70);
-
+    function escrever() {
+        if (i < textoDigitado.length) {
+            subtitulo.textContent += textoDigitado.charAt(i);
+            i++;
+            setTimeout(escrever, 70);
+        }
     }
 
+    escrever();
 }
-
-escrever();
 
 /*==============================================
         CONTADORES COM OBSERVER
@@ -89,73 +75,52 @@ escrever();
 
 const counters = document.querySelectorAll(".stat h3");
 
-const observer = new IntersectionObserver(entries => {
+if (counters.length > 0) {
+    const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const original = counter.innerText;
+                const numero = parseInt(original.replace(/\D/g, ""));
 
-    entries.forEach(entry => {
+                if (isNaN(numero)) return;
 
-        if(entry.isIntersecting){
+                const possuiK = original.toLowerCase().includes("k");
+                const possuiMais = original.includes("+");
 
-            const counter = entry.target;
+                let atual = 0;
+                const incremento = Math.max(1, numero / 80);
 
-            const original = counter.innerText;
+                function contar() {
+                    atual += incremento;
 
-            const numero = parseInt(original.replace(/\D/g,""));
+                    if (atual < numero) {
+                        if (possuiK && possuiMais) {
+                            counter.innerText = Math.floor(atual) + "k+";
+                        } else if (possuiK) {
+                            counter.innerText = Math.floor(atual) + "k";
+                        } else if (possuiMais) {
+                            counter.innerText = Math.floor(atual) + "+";
+                        } else {
+                            counter.innerText = Math.floor(atual);
+                        }
 
-            const possuiK = original.includes("k");
-
-            const possuiMais = original.includes("+");
-
-            let atual = 0;
-
-            const incremento = numero / 80;
-
-            function contar(){
-
-                atual += incremento;
-
-                if(atual < numero){
-
-                    if(possuiK){
-
-                        counter.innerText = Math.floor(atual)+"k+";
-
+                        requestAnimationFrame(contar);
+                    } else {
+                        counter.innerText = original;
                     }
-
-                    else if(possuiMais){
-
-                        counter.innerText = Math.floor(atual)+"+";
-
-                    }
-
-                    else{
-
-                        counter.innerText = Math.floor(atual);
-
-                    }
-
-                    requestAnimationFrame(contar);
-
                 }
 
-                else{
-
-                    counter.innerText = original;
-
-                }
-
+                contar();
+                counterObserver.unobserve(counter);
             }
-
-            contar();
-
-            observer.unobserve(counter);
-
-        }
-
+        });
+    }, {
+        threshold: 0.5
     });
 
-});
-
-counters.forEach(counter=>observer.observe(counter));
+    counters.forEach(counter => counterObserver.observe(counter));
+}
 
 /*==============================================
         REVEAL AO ROLAR A PÁGINA
@@ -163,24 +128,41 @@ counters.forEach(counter=>observer.observe(counter));
 
 const reveals = document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.classList.add("active");
-
-        }
-
+if (reveals.length > 0) {
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, {
+        threshold: 0.15
     });
 
-},{
-    threshold:0.15
-});
+    reveals.forEach(item => revealObserver.observe(item));
+}
 
-reveals.forEach(item=>{
+/*==============================================
+        FORMULÁRIO - FEEDBACK VISUAL
+==============================================*/
 
-    revealObserver.observe(item);
+const formulario = document.querySelector("form");
+const botaoEnviar = formulario ? formulario.querySelector("button") : null;
 
-});
+if (formulario && botaoEnviar) {
+    formulario.addEventListener("submit", () => {
+        botaoEnviar.innerText = "Enviando...";
+        botaoEnviar.disabled = true;
+    });
+}
+
+/*==============================================
+        ANO AUTOMÁTICO NO FOOTER
+==============================================*/
+
+const anoAtual = new Date().getFullYear();
+const footerTexto = document.querySelector("footer p:last-child");
+
+if (footerTexto) {
+    footerTexto.innerHTML = `© ${anoAtual} Daniel Lima. Todos os direitos reservados.`;
+}

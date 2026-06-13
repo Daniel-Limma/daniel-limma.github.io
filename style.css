@@ -2,1293 +2,596 @@
         DANIEL LIMA - PORTFÓLIO BI
 ======================================================*/
 
-/*================ GOOGLE FONT ================*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/*================ RESET ================*/
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-/*================ VARIÁVEIS ================*/
-
-:root{
-
-    --bg:#0b1120;
-
-    --bg2:#111827;
-
-    --card:#16213e;
-
-    --card-hover:#1e3a5f;
-
-    --primary:#2563eb;
-
-    --primary-hover:#3b82f6;
-
-    --text:#ffffff;
-
-    --text2:#cbd5e1;
-
-    --text3:#94a3b8;
-
-    --border:#24324a;
-
-    --shadow:0 15px 35px rgba(0,0,0,.35);
-
-    --radius:18px;
-
-}
-
-/*================ HTML ================*/
-
-html{
-
-    scroll-behavior:smooth;
-
-}
-
-/*================ BODY ================*/
-
-body{
-
-    font-family:'Poppins',sans-serif;
-
-    background:var(--bg);
-
-    color:var(--text);
-
-    line-height:1.7;
-
-}
-
-/*================ SCROLLBAR ================*/
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#08101d;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:var(--primary);
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:var(--primary-hover);
-
-}
-
-/*================ SELEÇÃO ================*/
-
-::selection{
-
-    background:var(--primary);
-
-    color:white;
-
-}
-
-/*================ NAVBAR ================*/
-
-nav{
-
-    position:fixed;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:75px;
-
-    background:rgba(11,17,32,.90);
-
-    backdrop-filter:blur(12px);
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:0 8%;
-
-    z-index:999;
-
-    border-bottom:1px solid var(--border);
-
-}
-
-.logo{
-
-    font-size:1.5rem;
-
-    font-weight:700;
-
-    color:white;
-
-}
-
-.logo span{
-
-    color:var(--primary);
-
-}
-
-nav ul{
-
-    display:flex;
-
-    list-style:none;
-
-    gap:30px;
-
-}
-
-nav ul li a{
-
-    color:var(--text2);
-
-    text-decoration:none;
-
-    transition:.3s;
-
-    font-weight:500;
-
-}
-
-nav ul li a:hover{
-
-    color:white;
-
-}
-
-/*================ HERO ================*/
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding-top:120px;
-
-    text-align:center;
-
-}
-
-/*================ BANNER ================*/
-
-.banner{
-
-    width:100%;
-
-    max-width:1350px;
-
-    height:320px;
-
-    object-fit:cover;
-
-    border-radius:22px;
-
-    box-shadow:var(--shadow);
-
-}
-
-/*================ FOTO ================*/
-
-.foto{
-
-    width:190px;
-
-    height:190px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    margin-top:-95px;
-
-    border:6px solid var(--bg);
-
-    background:white;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.4);
-
-    transition:.4s;
-
-}
-
-.foto:hover{
-
-    transform:scale(1.05);
-
-}
-
-/*================ HERO CONTENT ================*/
-
-.hero-content{
-
-    max-width:900px;
-
-    padding:20px;
-
-}
-
-.hero h1{
-
-    font-size:4rem;
-
-    margin-top:20px;
-
-    margin-bottom:8px;
-
-    font-weight:700;
-
-}
-
-.hero h2{
-
-    font-size:2rem;
-
-    color:var(--primary-hover);
-
-    margin-bottom:20px;
-
-}
-
-.skills{
-
-    color:var(--text2);
-
-    font-size:1.15rem;
-
-    margin-bottom:20px;
-
-}
-
-.descricao{
-
-    color:var(--text3);
-
-    max-width:700px;
-
-    margin:auto;
-
-    margin-bottom:35px;
-
-}
-
-/*================ BOTÕES ================*/
-
-.links{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:18px;
-
-    flex-wrap:wrap;
-
-}
-
-.links a{
-
-    padding:14px 34px;
-
-    border-radius:50px;
-
-    background:var(--primary);
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.35s;
-
-    box-shadow:0 10px 25px rgba(37,99,235,.25);
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.links a:hover{
-
-    background:var(--primary-hover);
-
-    transform:translateY(-4px);
-
-}
-
-/*================ ESTATÍSTICAS ================*/
-
-.stats{
-
-    width:100%;
-
-    max-width:1100px;
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:25px;
-
-    margin-top:70px;
 
+:root {
+    --bg: #0b1120;
+    --bg2: #111827;
+    --card: #16213e;
+    --card-hover: #1e3a5f;
+    --primary: #2563eb;
+    --primary-hover: #3b82f6;
+    --text: #ffffff;
+    --text2: #cbd5e1;
+    --text3: #94a3b8;
+    --border: #24324a;
+    --shadow: 0 18px 40px rgba(0, 0, 0, .35);
+    --radius: 20px;
 }
 
-.stat{
-
-    background:var(--card);
-
-    border:1px solid var(--border);
-
-    padding:30px;
-
-    border-radius:var(--radius);
-
-    box-shadow:var(--shadow);
-
-    transition:.35s;
-
+html {
+    scroll-behavior: smooth;
 }
-
-.stat:hover{
-
-    transform:translateY(-10px);
 
-    background:var(--card-hover);
-
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top, #13213d 0%, var(--bg) 42%, #070d18 100%);
+    color: var(--text);
+    line-height: 1.7;
 }
-
-.stat h3{
-
-    font-size:2rem;
 
-    color:var(--primary-hover);
-
+img {
+    max-width: 100%;
+    display: block;
 }
-
-.stat p{
-
-    color:var(--text2);
 
+a {
+    text-decoration: none;
 }
-
-/*================ ANIMAÇÕES ================*/
-
-@keyframes fadeUp{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(40px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
 
+::selection {
+    background: var(--primary);
+    color: white;
 }
 
-.hero{
+/* NAVBAR */
 
-    animation:fadeUp 1s;
-
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    background: rgba(11, 17, 32, .90);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    z-index: 999;
+    border-bottom: 1px solid var(--border);
 }
-
-.stat{
-
-    animation:fadeUp 1.2s;
 
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
 }
-
-/*====================================================
-                    SEÇÕES
-====================================================*/
-
-section{
-
-    max-width:1200px;
 
-    margin:auto;
-
-    padding:90px 25px;
-
+.logo span {
+    color: var(--primary-hover);
 }
-
-section h2{
-
-    text-align:center;
-
-    font-size:2.6rem;
-
-    margin-bottom:18px;
 
-    color:white;
-
-    position:relative;
-
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
 }
-
-section h2::after{
-
-    content:"";
-
-    width:90px;
-
-    height:4px;
 
-    background:var(--primary);
-
-    display:block;
-
-    margin:15px auto;
-
-    border-radius:30px;
-
+nav ul li a {
+    color: var(--text2);
+    font-weight: 500;
+    transition: .3s;
 }
-
-section p{
 
-    color:var(--text2);
-
+nav ul li a:hover {
+    color: white;
 }
-
-/* Fundo alternado */
 
-section:nth-of-type(even){
+/* HERO */
 
-    background:var(--bg2);
-
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 25px 70px;
+    text-align: center;
 }
-
-/*====================================================
-                    CARDS
-====================================================*/
-
-.cards{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-    gap:30px;
 
-    margin-top:40px;
-
+.banner {
+    width: 100%;
+    max-width: 1350px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
-
-.card{
-
-    background:rgba(22,33,62,.95);
-
-    border:1px solid var(--border);
-
-    border-radius:20px;
-
-    padding:30px;
 
-    box-shadow:var(--shadow);
-
-    transition:.35s;
-
-    overflow:hidden;
-
-    position:relative;
-
+.foto {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: -95px;
+    border: 6px solid var(--bg);
+    background: white;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+    animation: floating 4s ease-in-out infinite;
 }
-
-.card::before{
-
-    content:"";
 
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:4px;
-
-    background:var(--primary);
-
+.hero-content {
+    max-width: 900px;
+    padding: 25px 10px;
 }
-
-.card:hover{
 
-    transform:translateY(-10px);
-
-    background:var(--card-hover);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.45);
-
+.hero h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+    font-weight: 800;
 }
-
-.card h3{
-
-    margin-bottom:15px;
-
-    color:white;
 
-    font-size:1.3rem;
-
+.hero h2 {
+    font-size: 2rem;
+    color: var(--primary-hover);
+    margin-bottom: 18px;
+    min-height: 48px;
 }
-
-.card p{
-
-    color:var(--text2);
 
+.skills {
+    color: var(--text2);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
-
-/*====================================================
-            TECNOLOGIAS
-====================================================*/
-
-.card{
-
-    text-align:center;
 
+.descricao {
+    color: var(--text3);
+    max-width: 760px;
+    margin: 0 auto 35px;
 }
 
-.card h3{
+/* BOTÕES */
 
-    margin-top:15px;
-
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
-
-.card{
-
-    font-size:1.05rem;
 
+.links a,
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 50px;
+    background: var(--primary);
+    color: white;
+    font-weight: 600;
+    transition: .35s;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, .25);
 }
 
-.card:hover{
-
-    cursor:default;
-
+.links a:hover,
+.btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-4px);
 }
-
-/*====================================================
-            PROJETOS
-====================================================*/
 
-.projeto{
+/* STATS */
 
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:space-between;
-
+.stats {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 55px;
 }
-
-.projeto img{
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
 
-    border-radius:15px;
-
-    transition:.4s;
-
+.stat {
+    background: rgba(22, 33, 62, .95);
+    border: 1px solid var(--border);
+    padding: 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: .35s;
 }
-
-.projeto:hover img{
 
-    transform:scale(1.04);
-
+.stat:hover {
+    transform: translateY(-10px);
+    background: var(--card-hover);
 }
-
-.projeto p{
-
-    margin-top:15px;
 
+.stat h3 {
+    font-size: 2rem;
+    color: var(--primary-hover);
 }
-
-.projeto a{
-
-    margin-top:25px;
-
-    text-decoration:none;
-
-    color:white;
-
-    background:var(--primary);
-
-    padding:12px;
 
-    border-radius:12px;
-
-    font-weight:600;
-
-    transition:.35s;
-
+.stat p {
+    color: var(--text2);
 }
 
-.projeto a:hover{
+/* SEÇÕES */
 
-    background:var(--primary-hover);
-
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
 }
-
-/*====================================================
-            CERTIFICAÇÕES
-====================================================*/
-
-.card ul{
 
-    list-style:none;
-
-    text-align:left;
-
-    margin-top:10px;
-
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    color: white;
 }
-
-.card ul li{
-
-    padding:15px;
-
-    border-left:4px solid var(--primary);
-
-    margin-bottom:18px;
 
-    background:#182849;
-
-    border-radius:10px;
-
-    transition:.3s;
-
+section h2::after {
+    content: "";
+    width: 90px;
+    height: 4px;
+    background: var(--primary);
+    display: block;
+    margin: 15px auto 0;
+    border-radius: 30px;
 }
 
-.card ul li:hover{
-
-    transform:translateX(8px);
-
+section p {
+    color: var(--text2);
 }
-
-/*====================================================
-                CONTATO
-====================================================*/
 
-.contato-link{
+/* CARDS */
 
-    color:var(--primary-hover);
-
-    text-decoration:none;
-
-    transition:.3s;
-
-    font-weight:500;
-
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
-
-.contato-link:hover{
-
-    color:white;
 
+.card {
+    background: rgba(22, 33, 62, .95);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: .35s;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
 }
 
-#contato .card{
-
-    text-align:left;
-
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--primary);
 }
-
-#contato p{
 
-    margin-bottom:18px;
-
+.card:hover {
+    transform: translateY(-10px);
+    background: var(--card-hover);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, .45);
 }
-
-/*====================================================
-            ÍCONES DO CONTATO
-====================================================*/
-
-#contato p{
 
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
+.card h3 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 1.3rem;
 }
-
-/*====================================================
-                BOTÃO GERAL
-====================================================*/
-
-.btn{
-
-    display:inline-block;
-
-    padding:14px 28px;
 
-    background:var(--primary);
-
-    color:white;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    transition:.35s;
-
-    font-weight:600;
-
+.card p {
+    color: var(--text2);
 }
 
-.btn:hover{
+/* PROJETOS */
 
-    background:var(--primary-hover);
-
-    transform:translateY(-4px);
-
+.projeto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
-/*====================================================
-            SOMBRA AO PASSAR O MOUSE
-====================================================*/
-
-.cards:hover .card:not(:hover){
-
-    opacity:.75;
-
-    transform:scale(.98);
 
+.projeto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: .4s;
 }
 
-/*====================================================
-            ANIMAÇÃO DOS CARDS
-====================================================*/
-
-.card{
-
-    animation:fadeUp .8s ease;
-
+.projeto:hover img {
+    transform: scale(1.04);
 }
-
-/*====================================================
-            EFEITO NAS IMAGENS
-====================================================*/
-
-.projeto{
-
-    overflow:hidden;
 
+.projeto a {
+    margin-top: 25px;
+    color: white;
+    background: var(--primary);
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .35s;
 }
 
-.projeto img{
-
-    display:block;
-
+.projeto a:hover {
+    background: var(--primary-hover);
 }
-
-/*====================================================
-        DESTAQUE AO PASSAR O MOUSE
-====================================================*/
 
-.projeto:hover{
+/* CERTIFICAÇÕES */
 
-    border-color:var(--primary);
-
+.card ul {
+    list-style: none;
+    text-align: left;
 }
-
-/*====================================================
-        LINHA DECORATIVA
-====================================================*/
-
-.card::after{
-
-    content:"";
 
-    position:absolute;
-
-    bottom:0;
-
-    left:0;
-
-    width:0;
-
-    height:3px;
-
-    background:var(--primary);
-
-    transition:.4s;
-
+.card ul li {
+    padding: 15px;
+    border-left: 4px solid var(--primary);
+    margin-bottom: 18px;
+    background: #182849;
+    border-radius: 10px;
+    transition: .3s;
+    color: var(--text2);
 }
-
-.card:hover::after{
-
-    width:100%;
 
+.card ul li:hover {
+    transform: translateX(8px);
 }
-
-/*====================================================
-                    FOOTER
-====================================================*/
-
-footer{
-
-    margin-top:80px;
-
-    padding:45px 20px;
 
-    text-align:center;
+/* CONTATO */
 
-    background:#08101d;
-
-    border-top:1px solid var(--border);
-
+#contato .card {
+    text-align: left;
 }
-
-footer p{
-
-    color:var(--text3);
-
-    font-size:.95rem;
-
-    letter-spacing:.5px;
 
+.contato-link {
+    color: var(--primary-hover);
+    font-weight: 600;
+    transition: .3s;
+    word-break: break-word;
 }
 
-/*====================================================
-            TRANSIÇÕES GERAIS
-====================================================*/
-
-*{
-
-    transition:
-    background .30s,
-    color .30s,
-    border .30s,
-    transform .30s,
-    box-shadow .30s;
-
+.contato-link:hover {
+    color: white;
 }
 
-/*====================================================
-                IMAGENS
-====================================================*/
+/* FORMULÁRIO */
 
-img{
-
-    max-width:100%;
-
-    display:block;
-
+form {
+    max-width: 700px;
+    margin: auto;
 }
-
-/*====================================================
-            INPUTS FUTUROS
-====================================================*/
 
 input,
-textarea{
+textarea {
+    width: 100%;
+    padding: 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    background: #0f1a30;
+    color: white;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
 
-    width:100%;
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
 
-    padding:15px;
-
-    border-radius:12px;
-
-    border:1px solid var(--border);
-
-    background:#0f1a30;
-
-    color:white;
-
-    outline:none;
-
+input::placeholder,
+textarea::placeholder {
+    color: var(--text3);
 }
 
 input:focus,
-textarea:focus{
-
-    border-color:var(--primary);
-
+textarea:focus {
+    border-color: var(--primary-hover);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, .15);
 }
 
-/*====================================================
-            BOTÕES
-====================================================*/
-
-button{
-
-    cursor:pointer;
-
-    border:none;
-
+button {
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-/*====================================================
-            LINKS
-====================================================*/
-
-a{
-
-    transition:.3s;
-
+button:disabled {
+    opacity: .7;
+    cursor: not-allowed;
 }
 
-/*====================================================
-        ANIMAÇÃO FLUTUANTE
-====================================================*/
+/* FOOTER */
 
-@keyframes floating{
+footer {
+    margin-top: 80px;
+    padding: 45px 20px;
+    text-align: center;
+    background: #08101d;
+    border-top: 1px solid var(--border);
+}
 
-    0%{
+footer h2 {
+    color: white;
+}
 
-        transform:translateY(0);
+footer p {
+    color: var(--text3);
+    font-size: .95rem;
+}
 
+/* ANIMAÇÕES */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
     }
 
-    50%{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-        transform:translateY(-8px);
-
+@keyframes floating {
+    0% {
+        transform: translateY(0);
     }
 
-    100%{
-
-        transform:translateY(0);
-
+    50% {
+        transform: translateY(-8px);
     }
 
+    100% {
+        transform: translateY(0);
+    }
 }
 
-.foto{
-
-    animation:floating 4s ease-in-out infinite;
-
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity .8s ease, transform .8s ease;
 }
 
-/*====================================================
-            BRILHO NOS BOTÕES
-====================================================*/
-
-.links a{
-
-    position:relative;
-
-    overflow:hidden;
-
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.links a::before{
+/* RESPONSIVO */
 
-    content:"";
+@media (max-width: 1100px) {
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-    position:absolute;
+    .hero h1 {
+        font-size: 3.2rem;
+    }
 
-    top:0;
-
-    left:-120%;
-
-    width:60%;
-
-    height:100%;
-
-    background:rgba(255,255,255,.25);
-
-    transform:skewX(-25deg);
-
+    .hero h2 {
+        font-size: 1.7rem;
+    }
 }
 
-.links a:hover::before{
+@media (max-width: 900px) {
+    nav {
+        padding: 18px 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 14px;
+    }
 
-    left:130%;
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-    transition:.8s;
+    .hero {
+        padding-top: 190px;
+    }
 
+    .banner {
+        height: 250px;
+    }
 }
 
-/*====================================================
-            BANNER
-====================================================*/
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
 
-.banner{
+    .hero h2 {
+        font-size: 1.3rem;
+        min-height: 38px;
+    }
 
-    transition:.5s;
+    .descricao {
+        font-size: .95rem;
+    }
 
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .foto {
+        width: 150px;
+        height: 150px;
+        margin-top: -75px;
+    }
+
+    section {
+        padding: 70px 18px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto img {
+        height: 200px;
+    }
 }
 
-.banner:hover{
-
-    transform:scale(1.01);
-
-}
-
-/*====================================================
-        HOVER NAS TECNOLOGIAS
-====================================================*/
-
-.cards .card:hover h3{
-
-    color:var(--primary-hover);
-
-}
-
-/*====================================================
-            RESPONSIVIDADE
-====================================================*/
-
-@media(max-width:1100px){
-
-.stats{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.hero h1{
-
-font-size:3.2rem;
-
-}
-
-.hero h2{
-
-font-size:1.7rem;
-
-}
-
-}
-
-/*==========================*/
-
-@media(max-width:900px){
-
-nav{
-
-padding:20px;
-
-flex-direction:column;
-
-height:auto;
-
-gap:15px;
-
-}
-
-nav ul{
-
-gap:18px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.banner{
-
-height:250px;
-
-}
-
-.hero{
-
-padding-top:180px;
-
-}
-
-}
-
-/*==========================*/
-
-@media(max-width:768px){
-
-.hero h1{
-
-font-size:2.5rem;
-
-}
-
-.hero h2{
-
-font-size:1.3rem;
-
-}
-
-.descricao{
-
-font-size:.95rem;
-
-}
-
-.stats{
-
-grid-template-columns:1fr;
-
-}
-
-.foto{
-
-width:150px;
-
-height:150px;
-
-margin-top:-75px;
-
-}
-
-section{
-
-padding:70px 18px;
-
-}
-
-section h2{
-
-font-size:2rem;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-.projeto img{
-
-height:200px;
-
-}
-
-}
-
-/*==========================*/
-
-@media(max-width:500px){
-
-.hero{
-
-padding-top:170px;
-
-}
-
-.hero h1{
-
-font-size:2rem;
-
-}
-
-.hero h2{
-
-font-size:1.1rem;
-
-}
-
-.skills{
-
-font-size:.95rem;
-
-}
-
-.links{
-
-flex-direction:column;
-
-}
-
-.links a{
-
-width:100%;
-
-}
-
-.banner{
-
-height:180px;
-
-}
-
-.foto{
-
-width:120px;
-
-height:120px;
-
-margin-top:-60px;
-
-}
-
-.logo{
-
-font-size:1.2rem;
-
-}
-
-nav ul{
-
-gap:10px;
-
-font-size:.9rem;
-
-}
-
-}
-
-/*====================================================
-            ANIMAÇÃO AO ROLAR A PÁGINA
-====================================================*/
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(60px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-
-}
-
-.reveal.active{
-
-    opacity:1;
-
-    transform:translateY(0);
-
+@media (max-width: 500px) {
+    .hero {
+        padding-top: 180px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 1.1rem;
+    }
+
+    .skills {
+        font-size: .9rem;
+    }
+
+    .links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .links a {
+        width: 100%;
+    }
+
+    .banner {
+        height: 180px;
+    }
+
+    .foto {
+        width: 120px;
+        height: 120px;
+        margin-top: -60px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: .88rem;
+    }
 }
