@@ -116,8 +116,9 @@ nav ul li a {
 }
 
 .menu a:hover,
+.menu a.active,
 nav ul li a:hover {
-    color: white;
+    color: var(--cyan);
 }
 
 /* HERO */
@@ -292,50 +293,38 @@ nav ul li a:hover {
     color: var(--text3);
 }
 
+/* ÍCONES DO CARD */
+
 .mini-stack {
     display: flex;
     justify-content: center;
+    gap: 24px;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 22px;
+    margin-top: 28px;
 }
 
-.mini-stack span {
-    padding: 8px 14px;
-    background: rgba(37,99,235,.18);
-    border: 1px solid rgba(59,130,246,.35);
-    color: #dbeafe;
-    border-radius: 999px;
+.skill-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-icon i {
+    font-size: 2rem;
+    color: var(--cyan);
+    transition: .3s;
+}
+
+.skill-icon span {
+    color: var(--text2);
     font-size: .82rem;
     font-weight: 700;
 }
 
-/* BANNER PREMIUM */
-
-.banner-section {
-    width: 100%;
-    padding: 20px 25px 60px;
-}
-
-.hero-banner-container {
-    width: min(1180px, 100%);
-    margin: 0 auto;
-    padding: 0;
-}
-
-.hero-banner-premium {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 32px;
-    border: 1px solid rgba(59,130,246,.25);
-    box-shadow: 0 30px 80px rgba(0,0,0,.45);
-    transition: .4s;
-}
-
-.hero-banner-premium:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 40px 100px rgba(0,0,0,.55);
+.skill-icon:hover i {
+    transform: translateY(-5px) scale(1.1);
+    color: #60a5fa;
 }
 
 /* STATS */
@@ -485,6 +474,46 @@ section p {
 
 .card p {
     color: var(--text2);
+}
+
+/* EXPERIÊNCIA */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 26px;
+}
+
+.experience-card {
+    position: relative;
+}
+
+.experience-date {
+    display: inline-block;
+    padding: 8px 14px;
+    margin-bottom: 18px;
+    border-radius: 999px;
+    background: rgba(37,99,235,.15);
+    border: 1px solid rgba(59,130,246,.35);
+    color: var(--cyan);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.experience-card h4 {
+    color: var(--cyan);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.experience-card ul {
+    margin-top: 15px;
+    padding-left: 18px;
+}
+
+.experience-card li {
+    color: var(--text2);
+    margin-bottom: 8px;
 }
 
 /* TECH */
@@ -787,6 +816,7 @@ footer p {
         grid-template-columns: 1fr 1fr;
     }
 
+    .experience-grid,
     .contact-grid {
         grid-template-columns: 1fr 1fr;
     }
@@ -815,11 +845,12 @@ footer p {
     }
 
     .hero {
-        padding-top: 210px;
+        padding-top: 230px;
     }
 
     .hero-container,
     .about-grid,
+    .experience-grid,
     .tech-grid,
     .project-grid,
     .contact-grid {
@@ -877,12 +908,12 @@ footer p {
         height: 145px;
     }
 
-    .banner-section {
-        padding: 20px 18px 45px;
+    .mini-stack {
+        gap: 18px;
     }
 
-    .hero-banner-premium {
-        border-radius: 22px;
+    .skill-icon i {
+        font-size: 1.7rem;
     }
 
     .whatsapp-float {
