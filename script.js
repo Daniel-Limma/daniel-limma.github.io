@@ -150,16 +150,9 @@ const formulario = document.querySelector("form");
 const botaoEnviar = formulario ? formulario.querySelector("button") : null;
 
 if (formulario && botaoEnviar) {
-    const textoOriginalBotao = botaoEnviar.innerHTML;
-
     formulario.addEventListener("submit", () => {
         botaoEnviar.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Enviando...`;
         botaoEnviar.disabled = true;
-
-        setTimeout(() => {
-            botaoEnviar.innerHTML = textoOriginalBotao;
-            botaoEnviar.disabled = false;
-        }, 8000);
     });
 }
 
@@ -175,21 +168,21 @@ if (footerTexto) {
 }
 
 /*==============================================
-        EFEITO PARALLAX LEVE NO HERO CARD
+        EFEITO PREMIUM NO CARD DA FOTO
 ==============================================*/
 
-const heroCard = document.querySelector(".hero-card");
+const profileCard = document.querySelector(".profile-premium-card");
 
-if (heroCard) {
+if (profileCard) {
     document.addEventListener("mousemove", (e) => {
-        const x = (window.innerWidth / 2 - e.clientX) / 60;
-        const y = (window.innerHeight / 2 - e.clientY) / 60;
+        const x = (window.innerWidth / 2 - e.clientX) / 80;
+        const y = (window.innerHeight / 2 - e.clientY) / 80;
 
-        heroCard.style.transform = `translateY(-4px) rotateX(${y}deg) rotateY(${-x}deg)`;
+        profileCard.style.transform = `translateY(-4px) rotateX(${y}deg) rotateY(${-x}deg)`;
     });
 
     document.addEventListener("mouseleave", () => {
-        heroCard.style.transform = "translateY(0) rotateX(0) rotateY(0)";
+        profileCard.style.transform = "translateY(0) rotateX(0) rotateY(0)";
     });
 }
 
