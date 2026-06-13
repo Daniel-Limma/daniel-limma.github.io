@@ -1,5 +1,5 @@
 /*==================================================
-            PORTFÓLIO DANIEL LIMA - JS PREMIUM
+        PORTFÓLIO DANIEL LIMA - JS COMPLETO
 ====================================================*/
 
 /* SCROLL SUAVE */
@@ -114,7 +114,7 @@ if (counters.length > 0) {
     counters.forEach(counter => counterObserver.observe(counter));
 }
 
-/* REVEAL */
+/* REVEAL AO ROLAR */
 
 const reveals = document.querySelectorAll(".reveal");
 
@@ -138,13 +138,20 @@ const formulario = document.querySelector("form");
 const botaoEnviar = formulario ? formulario.querySelector("button") : null;
 
 if (formulario && botaoEnviar) {
+    const textoOriginal = botaoEnviar.innerHTML;
+
     formulario.addEventListener("submit", () => {
         botaoEnviar.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Enviando...`;
         botaoEnviar.disabled = true;
+
+        setTimeout(() => {
+            botaoEnviar.innerHTML = textoOriginal;
+            botaoEnviar.disabled = false;
+        }, 6000);
     });
 }
 
-/* ANO AUTOMÁTICO */
+/* ANO AUTOMÁTICO NO FOOTER */
 
 const anoAtual = new Date().getFullYear();
 const footerTexto = document.querySelector("footer p:last-child");
@@ -153,7 +160,7 @@ if (footerTexto) {
     footerTexto.innerHTML = `© ${anoAtual} Daniel Lima. Todos os direitos reservados.`;
 }
 
-/* WHATSAPP */
+/* WHATSAPP COM MENSAGEM PRONTA */
 
 const whatsappFloat = document.querySelector(".whatsapp-float");
 
@@ -164,3 +171,28 @@ if (whatsappFloat) {
 
     whatsappFloat.href = `https://wa.me/5585994012461?text=${mensagem}`;
 }
+
+/* MENU ATIVO AO ROLAR */
+
+const sections = document.querySelectorAll("section[id], header[id]");
+const navLinks = document.querySelectorAll(".menu a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 180;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+        }
+    });
+});

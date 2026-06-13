@@ -6,12 +6,10 @@
 
 :root {
     --bg: #070d18;
-    --bg2: #0b1120;
     --card: rgba(15, 23, 42, .82);
     --primary: #2563eb;
     --primary2: #3b82f6;
     --cyan: #38bdf8;
-    --green: #22c55e;
     --text: #ffffff;
     --text2: #cbd5e1;
     --text3: #94a3b8;
@@ -46,8 +44,8 @@ body::before {
     position: fixed;
     inset: 0;
     background-image:
-        linear-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, .035) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
     background-size: 60px 60px;
     pointer-events: none;
     z-index: -1;
@@ -87,7 +85,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 999;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, .30);
+    box-shadow: 0 20px 60px rgba(0,0,0,.30);
 }
 
 .logo {
@@ -126,7 +124,7 @@ nav ul li a:hover {
 
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     padding: 155px 25px 70px;
 }
 
@@ -197,23 +195,23 @@ nav ul li a:hover {
     gap: 10px;
     padding: 14px 24px;
     border-radius: 999px;
-    border: 1px solid rgba(59, 130, 246, .35);
+    border: 1px solid rgba(59,130,246,.35);
     color: white;
     background: linear-gradient(135deg, var(--primary), var(--primary2));
     font-weight: 700;
     cursor: pointer;
     transition: .35s;
-    box-shadow: 0 18px 40px rgba(37, 99, 235, .25);
+    box-shadow: 0 18px 40px rgba(37,99,235,.25);
 }
 
 .btn:hover,
 .projeto a:hover {
     transform: translateY(-4px);
-    box-shadow: 0 24px 60px rgba(37, 99, 235, .35);
+    box-shadow: 0 24px 60px rgba(37,99,235,.35);
 }
 
 .btn.secondary {
-    background: rgba(15, 23, 42, .7);
+    background: rgba(15,23,42,.7);
     border: 1px solid var(--border);
     box-shadow: none;
 }
@@ -231,7 +229,7 @@ nav ul li a:hover {
     place-items: center;
     border-radius: 50%;
     color: white;
-    background: rgba(15, 23, 42, .75);
+    background: rgba(15,23,42,.75);
     border: 1px solid var(--border);
     transition: .35s;
 }
@@ -247,7 +245,7 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     padding: 42px 30px;
-    background: linear-gradient(145deg, rgba(59, 130, 246, .22), rgba(15, 23, 42, .86));
+    background: linear-gradient(145deg, rgba(59,130,246,.22), rgba(15,23,42,.86));
     border: 1px solid var(--border);
     border-radius: 34px;
     box-shadow: var(--shadow);
@@ -261,7 +259,7 @@ nav ul li a:hover {
     inset: -80px auto auto -80px;
     width: 190px;
     height: 190px;
-    background: rgba(56, 189, 248, .20);
+    background: rgba(56,189,248,.20);
     filter: blur(20px);
     border-radius: 50%;
 }
@@ -273,7 +271,7 @@ nav ul li a:hover {
     padding: 7px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--primary2), var(--cyan));
-    box-shadow: 0 22px 60px rgba(37, 99, 235, .35);
+    box-shadow: 0 22px 60px rgba(37,99,235,.35);
 }
 
 .profile-photo {
@@ -304,8 +302,8 @@ nav ul li a:hover {
 
 .mini-stack span {
     padding: 8px 14px;
-    background: rgba(37, 99, 235, .18);
-    border: 1px solid rgba(59, 130, 246, .35);
+    background: rgba(37,99,235,.18);
+    border: 1px solid rgba(59,130,246,.35);
     color: #dbeafe;
     border-radius: 999px;
     font-size: .82rem;
@@ -314,25 +312,30 @@ nav ul li a:hover {
 
 /* BANNER PREMIUM */
 
+.banner-section {
+    width: 100%;
+    padding: 20px 25px 60px;
+}
+
 .hero-banner-container {
     width: min(1180px, 100%);
-    margin: 50px auto 0;
-    padding: 0 25px;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .hero-banner-premium {
     width: 100%;
+    height: auto;
     display: block;
     border-radius: 32px;
-    border: 1px solid rgba(59, 130, 246, .25);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, .45);
-    overflow: hidden;
+    border: 1px solid rgba(59,130,246,.25);
+    box-shadow: 0 30px 80px rgba(0,0,0,.45);
     transition: .4s;
 }
 
 .hero-banner-premium:hover {
     transform: translateY(-5px);
-    box-shadow: 0 40px 100px rgba(0, 0, 0, .55);
+    box-shadow: 0 40px 100px rgba(0,0,0,.55);
 }
 
 /* STATS */
@@ -357,7 +360,7 @@ nav ul li a:hover {
 
 .stat:hover {
     transform: translateY(-8px);
-    border-color: rgba(59, 130, 246, .55);
+    border-color: rgba(59,130,246,.55);
 }
 
 .stat i {
@@ -414,7 +417,7 @@ section p {
     color: var(--text3);
 }
 
-/* GRIDS E CARDS */
+/* GRIDS */
 
 .cards,
 .about-grid,
@@ -434,6 +437,8 @@ section p {
 .contact-grid {
     grid-template-columns: repeat(4, 1fr);
 }
+
+/* CARDS */
 
 .card,
 .form-card,
@@ -456,14 +461,14 @@ section p {
     position: absolute;
     inset: 0 0 auto 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, .9), transparent);
+    background: linear-gradient(90deg, transparent, rgba(56,189,248,.9), transparent);
 }
 
 .card:hover,
 .form-card:hover,
 .cta-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(56, 189, 248, .35);
+    border-color: rgba(56,189,248,.35);
 }
 
 .card h3 {
@@ -528,6 +533,25 @@ section p {
     border-radius: 14px;
 }
 
+.placeholder-project {
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.15),
+            rgba(15,23,42,.95)
+        );
+    border-bottom: 1px solid rgba(59,130,246,.25);
+}
+
+.placeholder-project i {
+    font-size: 4rem;
+    color: var(--primary2);
+}
+
 /* CERTIFICAÇÕES */
 
 .cert-card {
@@ -545,7 +569,7 @@ section p {
     gap: 16px;
     padding: 18px;
     margin-bottom: 16px;
-    background: rgba(15, 23, 42, .65);
+    background: rgba(15,23,42,.65);
     border: 1px solid var(--border);
     border-radius: 16px;
     color: var(--text2);
@@ -587,7 +611,7 @@ section p {
     color: var(--cyan);
 }
 
-/* CTA CURRÍCULO */
+/* CTA */
 
 .cta-card {
     display: flex;
@@ -595,7 +619,7 @@ section p {
     align-items: center;
     gap: 30px;
     background:
-        linear-gradient(135deg, rgba(37, 99, 235, .20), rgba(56, 189, 248, .08)),
+        linear-gradient(135deg, rgba(37,99,235,.20), rgba(56,189,248,.08)),
         var(--card);
 }
 
@@ -628,7 +652,7 @@ textarea {
     padding: 16px 18px;
     border-radius: 16px;
     border: 1px solid var(--border);
-    background: rgba(7, 13, 24, .75);
+    background: rgba(7,13,24,.75);
     color: white;
     outline: none;
     font-family: 'Poppins', sans-serif;
@@ -649,7 +673,7 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
     border-color: var(--cyan);
-    box-shadow: 0 0 0 4px rgba(56, 189, 248, .10);
+    box-shadow: 0 0 0 4px rgba(56,189,248,.10);
 }
 
 button {
@@ -662,7 +686,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* WHATSAPP FLUTUANTE */
+/* WHATSAPP */
 
 .whatsapp-float {
     position: fixed;
@@ -677,7 +701,7 @@ button:disabled {
     color: white;
     font-size: 1.8rem;
     z-index: 998;
-    box-shadow: 0 18px 40px rgba(34, 197, 94, .35);
+    box-shadow: 0 18px 40px rgba(34,197,94,.35);
     transition: .35s;
 }
 
@@ -693,7 +717,7 @@ footer {
     margin: 60px auto 25px;
     padding: 45px 25px;
     text-align: center;
-    background: rgba(7, 13, 24, .82);
+    background: rgba(7,13,24,.82);
     backdrop-filter: blur(18px);
     border: 1px solid var(--border);
     border-radius: 28px;
@@ -731,23 +755,15 @@ footer p {
 
 .footer-links a:hover {
     color: white;
-    background: rgba(37, 99, 235, .25);
+    background: rgba(37,99,235,.25);
 }
 
 /* ANIMAÇÕES */
 
 @keyframes floating {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
 .reveal {
@@ -861,9 +877,8 @@ footer p {
         height: 145px;
     }
 
-    .hero-banner-container {
-        padding: 0;
-        margin-top: 35px;
+    .banner-section {
+        padding: 20px 18px 45px;
     }
 
     .hero-banner-premium {
