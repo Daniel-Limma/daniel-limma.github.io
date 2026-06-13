@@ -2,9 +2,7 @@
             PORTFÓLIO DANIEL LIMA - JS PREMIUM
 ====================================================*/
 
-/*==============================================
-        SCROLL SUAVE DO MENU
-==============================================*/
+/* SCROLL SUAVE */
 
 const linksMenu = document.querySelectorAll('a[href^="#"]');
 
@@ -27,9 +25,7 @@ linksMenu.forEach(link => {
     });
 });
 
-/*==============================================
-            NAVBAR AO ROLAR
-==============================================*/
+/* NAVBAR AO ROLAR */
 
 const navbar = document.querySelector("nav");
 
@@ -47,9 +43,7 @@ if (navbar) {
     });
 }
 
-/*==============================================
-            EFEITO DIGITAÇÃO
-==============================================*/
+/* EFEITO DIGITAÇÃO */
 
 const textoDigitado = "Analista de Business Intelligence";
 const subtitulo = document.querySelector(".hero h2");
@@ -69,9 +63,7 @@ if (subtitulo) {
     escrever();
 }
 
-/*==============================================
-        CONTADORES ANIMADOS
-==============================================*/
+/* CONTADORES */
 
 const counters = document.querySelectorAll(".stat h3");
 
@@ -122,9 +114,7 @@ if (counters.length > 0) {
     counters.forEach(counter => counterObserver.observe(counter));
 }
 
-/*==============================================
-        REVEAL AO ROLAR A PÁGINA
-==============================================*/
+/* REVEAL */
 
 const reveals = document.querySelectorAll(".reveal");
 
@@ -142,9 +132,7 @@ if (reveals.length > 0) {
     reveals.forEach(item => revealObserver.observe(item));
 }
 
-/*==============================================
-        FORMULÁRIO - FEEDBACK VISUAL
-==============================================*/
+/* FORMULÁRIO */
 
 const formulario = document.querySelector("form");
 const botaoEnviar = formulario ? formulario.querySelector("button") : null;
@@ -156,9 +144,7 @@ if (formulario && botaoEnviar) {
     });
 }
 
-/*==============================================
-        ANO AUTOMÁTICO NO FOOTER
-==============================================*/
+/* ANO AUTOMÁTICO */
 
 const anoAtual = new Date().getFullYear();
 const footerTexto = document.querySelector("footer p:last-child");
@@ -167,28 +153,7 @@ if (footerTexto) {
     footerTexto.innerHTML = `© ${anoAtual} Daniel Lima. Todos os direitos reservados.`;
 }
 
-/*==============================================
-        EFEITO PREMIUM NO CARD DA FOTO
-==============================================*/
-
-const profileCard = document.querySelector(".profile-premium-card");
-
-if (profileCard) {
-    document.addEventListener("mousemove", (e) => {
-        const x = (window.innerWidth / 2 - e.clientX) / 80;
-        const y = (window.innerHeight / 2 - e.clientY) / 80;
-
-        profileCard.style.transform = `translateY(-4px) rotateX(${y}deg) rotateY(${-x}deg)`;
-    });
-
-    document.addEventListener("mouseleave", () => {
-        profileCard.style.transform = "translateY(0) rotateX(0) rotateY(0)";
-    });
-}
-
-/*==============================================
-        BOTÃO WHATSAPP - MENSAGEM PRONTA
-==============================================*/
+/* WHATSAPP */
 
 const whatsappFloat = document.querySelector(".whatsapp-float");
 
