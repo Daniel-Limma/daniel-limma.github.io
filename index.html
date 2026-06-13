@@ -6,25 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Lima | Analista de BI</title>
 
-    <meta name="description" content="Portfólio de Daniel Lima - Analista de Business Intelligence especializado em Power BI, SQL, Python e Análise de Dados.">
-    <meta name="keywords" content="Power BI, SQL, Python, BI, Business Intelligence, Dashboard, Dados">
+    <meta name="description" content="Portfólio profissional de Daniel Lima, Analista de Business Intelligence com foco em Power BI, SQL, Python, Excel, DAX e Power Query.">
+    <meta name="keywords" content="Power BI, SQL, Python, Excel, DAX, Power Query, Business Intelligence, BI, Dashboard, Dados">
     <meta name="author" content="Daniel Lima">
 
-    <meta property="og:title" content="Daniel Lima | Analista de BI">
-    <meta property="og:description" content="Portfólio profissional de Business Intelligence">
-    <meta property="og:image" content="imagens/banner.png">
-    <meta property="og:type" content="website">
-
     <link rel="icon" href="imagens/DL.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">Daniel<span>.</span></div>
+    <nav class="navbar">
+        <a href="#inicio" class="logo">DL<span>.</span></a>
 
-        <ul>
+        <ul class="menu">
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#tecnologias">Tecnologias</a></li>
@@ -36,50 +33,102 @@
 
     <header id="inicio" class="hero reveal">
 
-        <img src="imagens/banner.png" alt="Banner do portfólio" class="banner">
-        <img src="imagens/foto.jpeg" alt="Foto de Daniel Lima" class="foto">
+        <div class="hero-bg"></div>
 
-        <div class="hero-content">
+        <div class="hero-container">
 
-            <p class="skills">Power BI • SQL • Python • Excel • DAX • Power Query</p>
+            <div class="hero-text">
 
-            <h1>Daniel Lima</h1>
+                <span class="tag">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Business Intelligence • Dados • Performance
+                </span>
 
-            <h2>Analista de Business Intelligence</h2>
+                <h1>Daniel Lima</h1>
 
-            <p class="descricao">
-                Transformo dados em decisões estratégicas por meio de dashboards,
-                modelagem de dados, ETL, indicadores de desempenho e análises orientadas
-                ao negócio.
-            </p>
+                <h2>Analista de Business Intelligence</h2>
 
-            <div class="links">
-                <a href="#projetos">Ver Projetos</a>
-                <a href="imagens/"Curriculo_Daniel_Fernandes_Dados.pdf" download>Baixar Currículo</a>
-                <a href="https://github.com/Daniel-Limma" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/daniellimma" target="_blank">LinkedIn</a>
+                <p>
+                    Transformo dados em decisões estratégicas por meio de dashboards,
+                    modelagem de dados, ETL, indicadores de desempenho e análises
+                    orientadas ao negócio.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn primary">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        Ver Projetos
+                    </a>
+
+                    <a
+                        href="imagens/Curriculo_Daniel_Fernandes_Dados.pdf"
+                        download="Daniel_Lima_Curriculo.pdf"
+                        class="btn secondary">
+
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        Baixar Currículo
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://wa.me/5585994012461" target="_blank" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+
+                    <a href="https://github.com/Daniel-Limma" target="_blank" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/daniellimma" target="_blank" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daniellimafs01@gmail.com" target="_blank" aria-label="E-mail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-card">
+
+                <img src="imagens/banner.png" alt="Banner Daniel Lima" class="hero-banner">
+
+                <div class="profile-box">
+                    <img src="imagens/foto.jpeg" alt="Foto de Daniel Lima" class="profile-img">
+
+                    <div>
+                        <h3>Daniel Lima</h3>
+                        <p>Power BI • SQL • Python</p>
+                    </div>
+                </div>
+
             </div>
 
         </div>
 
-        <div class="stats">
+        <div class="stats premium-stats">
 
             <div class="stat reveal">
+                <i class="fa-solid fa-chart-column"></i>
                 <h3>10+</h3>
                 <p>Dashboards Desenvolvidos</p>
             </div>
 
             <div class="stat reveal">
+                <i class="fa-solid fa-database"></i>
                 <h3>50+</h3>
                 <p>Consultas SQL</p>
             </div>
 
             <div class="stat reveal">
+                <i class="fa-solid fa-layer-group"></i>
                 <h3>100k+</h3>
                 <p>Registros Analisados</p>
             </div>
 
             <div class="stat reveal">
+                <i class="fa-solid fa-certificate"></i>
                 <h3>4</h3>
                 <p>Certificações</p>
             </div>
@@ -88,304 +137,387 @@
 
     </header>
 
-    <section id="sobre" class="reveal">
+    <main>
 
-        <h2>Sobre Mim</h2>
+        <section id="sobre" class="section reveal">
 
-        <div class="card reveal">
-
-            <p>
-                Sou profissional da área de dados com foco em Business Intelligence,
-                dashboards, SQL, Power BI, Excel, Power Query e automação de processos.
-            </p>
-
-            <br>
-
-            <p>
-                Desenvolvo soluções para transformar dados brutos em informações claras,
-                visuais e estratégicas, facilitando a análise de indicadores e apoiando
-                a tomada de decisão.
-            </p>
-
-            <br>
-
-            <p>
-                Tenho interesse em projetos de análise de dados, BI, modelagem,
-                ETL e construção de portfólios profissionais voltados para resultados.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section id="tecnologias" class="reveal">
-
-        <h2>Tecnologias</h2>
-
-        <div class="cards">
-
-            <div class="card reveal">
-                <h3>📊 Power BI</h3>
-                <p>Dashboards, KPIs, storytelling, Power Query, DAX e modelagem de dados.</p>
+            <div class="section-header">
+                <span>Sobre</span>
+                <h2>Perfil Profissional</h2>
+                <p>Atuação focada em dados, indicadores e visualização estratégica.</p>
             </div>
 
-            <div class="card reveal">
-                <h3>🗄 SQL</h3>
-                <p>Consultas, filtros, joins, CTEs, views, agrupamentos e análise relacional.</p>
+            <div class="about-grid">
+
+                <div class="card destaque">
+                    <h3>
+                        <i class="fa-solid fa-user-tie"></i>
+                        Quem sou eu
+                    </h3>
+
+                    <p>
+                        Sou profissional da área de dados com foco em Business Intelligence,
+                        dashboards, SQL, Power BI, Excel, Power Query e automação de processos.
+                    </p>
+                </div>
+
+                <div class="card destaque">
+                    <h3>
+                        <i class="fa-solid fa-bullseye"></i>
+                        Meu foco
+                    </h3>
+
+                    <p>
+                        Desenvolvo soluções para transformar dados brutos em informações claras,
+                        visuais e estratégicas, facilitando a análise de indicadores e apoiando
+                        a tomada de decisão.
+                    </p>
+                </div>
+
+                <div class="card destaque">
+                    <h3>
+                        <i class="fa-solid fa-rocket"></i>
+                        Objetivo
+                    </h3>
+
+                    <p>
+                        Criar análises com boa apresentação visual, estrutura técnica organizada
+                        e visão de negócio para gerar valor real.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="card reveal">
-                <h3>🐍 Python</h3>
-                <p>Pandas, automação, tratamento de dados, scripts e análise exploratória.</p>
+        </section>
+
+        <section id="tecnologias" class="section reveal">
+
+            <div class="section-header">
+                <span>Stack</span>
+                <h2>Tecnologias</h2>
+                <p>Ferramentas que utilizo para transformar dados em soluções.</p>
             </div>
 
-            <div class="card reveal">
-                <h3>📈 Excel</h3>
-                <p>Tabelas dinâmicas, dashboards, Power Query, PROCX e análise de dados.</p>
+            <div class="cards tech-grid">
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <h3>Power BI</h3>
+                    <p>Dashboards, KPIs, storytelling, Power Query, DAX e modelagem.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Consultas, filtros, joins, CTEs, views, agrupamentos e análise relacional.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-brands fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Pandas, automação, tratamento de dados, scripts e análise exploratória.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <h3>Excel</h3>
+                    <p>Tabelas dinâmicas, dashboards, Power Query, PROCX e análise de dados.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3>ETL</h3>
+                    <p>Extração, transformação, limpeza, padronização e integração de dados.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-calculator"></i>
+                    <h3>DAX</h3>
+                    <p>Medidas, indicadores, cálculos, percentuais e análises de desempenho.</p>
+                </div>
+
             </div>
 
-            <div class="card reveal">
-                <h3>⚡ ETL</h3>
-                <p>Extração, transformação, limpeza, padronização e integração de dados.</p>
+        </section>
+
+        <section id="projetos" class="section reveal">
+
+            <div class="section-header">
+                <span>Portfólio</span>
+                <h2>Projetos em Destaque</h2>
+                <p>Projetos voltados para análise, indicadores e tomada de decisão.</p>
             </div>
 
-            <div class="card reveal">
-                <h3>📐 DAX</h3>
-                <p>Medidas, indicadores, cálculos, percentuais e análises de desempenho.</p>
+            <div class="cards project-grid">
+
+                <article class="card projeto reveal">
+                    <img src="imagens/dashboard-financeiro.png" alt="Dashboard Financeiro">
+
+                    <div class="project-content">
+                        <span class="project-tag">Power BI • Financeiro</span>
+
+                        <h3>Dashboard Financeiro</h3>
+
+                        <p>
+                            Dashboard em Power BI para análise de receitas, despesas, lucro,
+                            fluxo de caixa e indicadores financeiros.
+                        </p>
+
+                        <a href="https://github.com/Daniel-Limma/portfolio-powerbi" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                            Ver Projeto
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card projeto reveal">
+                    <img src="imagens/dashboard-financeiro.png" alt="Dashboard RH">
+
+                    <div class="project-content">
+                        <span class="project-tag">Power BI • RH</span>
+
+                        <h3>Dashboard RH</h3>
+
+                        <p>
+                            Projeto voltado para análise de turnover, headcount, admissões,
+                            desligamentos, absenteísmo e performance.
+                        </p>
+
+                        <a href="#">
+                            <i class="fa-solid fa-code"></i>
+                            Em Desenvolvimento
+                        </a>
+                    </div>
+                </article>
+
+                <article class="card projeto reveal">
+                    <img src="imagens/dashboard-financeiro.png" alt="Dashboard Comercial">
+
+                    <div class="project-content">
+                        <span class="project-tag">Power BI • Comercial</span>
+
+                        <h3>Dashboard Comercial</h3>
+
+                        <p>
+                            Dashboard para acompanhamento de vendas, ticket médio, metas,
+                            faturamento e performance comercial.
+                        </p>
+
+                        <a href="#">
+                            <i class="fa-solid fa-code"></i>
+                            Em Desenvolvimento
+                        </a>
+                    </div>
+                </article>
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section id="certificacoes" class="section reveal">
 
-    <section id="projetos" class="reveal">
-
-        <h2>Projetos</h2>
-
-        <div class="cards">
-
-            <div class="card projeto reveal">
-                <img src="imagens/dashboard-financeiro.png" alt="Dashboard Financeiro">
-
-                <h3>Dashboard Financeiro</h3>
-
-                <p>
-                    Dashboard em Power BI para análise de receitas, despesas, lucro,
-                    fluxo de caixa e indicadores financeiros.
-                </p>
-
-                <a href="https://github.com/Daniel-Limma/portfolio-powerbi" target="_blank">
-                    Ver Projeto
-                </a>
+            <div class="section-header">
+                <span>Formação</span>
+                <h2>Certificações</h2>
+                <p>Estudos e formações direcionadas à área de dados.</p>
             </div>
 
-            <div class="card projeto reveal">
-                <img src="imagens/dashboard-financeiro.png" alt="Dashboard de Recursos Humanos">
+            <div class="card cert-card reveal">
 
-                <h3>Dashboard RH</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div>
+                            <strong>Microsoft Power BI para Business Intelligence e Data Science</strong>
+                            <small>Data Science Academy</small>
+                        </div>
+                    </li>
 
-                <p>
-                    Projeto voltado para análise de turnover, headcount, admissões,
-                    desligamentos, absenteísmo e performance.
-                </p>
+                    <li>
+                        <i class="fa-solid fa-database"></i>
+                        <div>
+                            <strong>Introdução à Linguagem SQL</strong>
+                            <small>Modelagem, consultas e análise relacional</small>
+                        </div>
+                    </li>
 
-                <a href="#">Em Desenvolvimento</a>
+                    <li>
+                        <i class="fa-brands fa-git-alt"></i>
+                        <div>
+                            <strong>Git e GitHub</strong>
+                            <small>Versionamento e publicação de projetos</small>
+                        </div>
+                    </li>
+
+                    <li>
+                        <i class="fa-brands fa-python"></i>
+                        <div>
+                            <strong>Python para Análise de Dados</strong>
+                            <small>Pandas, automação e tratamento de dados</small>
+                        </div>
+                    </li>
+                </ul>
+
             </div>
 
-            <div class="card projeto reveal">
-                <img src="imagens/dashboard-financeiro.png" alt="Dashboard Comercial">
+        </section>
 
-                <h3>Dashboard Comercial</h3>
+        <section id="contato" class="section reveal">
 
-                <p>
-                    Dashboard para acompanhamento de vendas, ticket médio, metas,
-                    faturamento e performance comercial.
-                </p>
-
-                <a href="#">Em Desenvolvimento</a>
+            <div class="section-header">
+                <span>Contato</span>
+                <h2>Vamos Conversar?</h2>
+                <p>Entre em contato para projetos, oportunidades ou networking.</p>
             </div>
 
-        </div>
+            <div class="cards contact-grid">
 
-    </section>
-
-    <section id="certificacoes" class="reveal">
-
-        <h2>Certificações</h2>
-
-        <div class="card reveal">
-
-            <ul>
-                <li>
-                    🎓 Microsoft Power BI para Business Intelligence e Data Science
-                    <br>
-                    <small>Data Science Academy</small>
-                </li>
-
-                <li>🎓 Introdução à Linguagem SQL</li>
-                <li>🎓 Git e GitHub</li>
-                <li>🎓 Python para Análise de Dados</li>
-            </ul>
-
-        </div>
-
-    </section>
-
-    <section id="objetivo" class="reveal">
-
-        <h2>Objetivo Profissional</h2>
-
-        <div class="card reveal">
-
-            <p>
-                Busco oportunidades como Analista de Business Intelligence,
-                Analista de Dados ou áreas relacionadas, contribuindo com soluções
-                baseadas em dados, automação de processos, desenvolvimento de dashboards
-                e geração de insights para tomada de decisão.
-            </p>
-
-        </div>
-
-    </section>
-
-    <section id="contato" class="reveal">
-
-        <h2>Contato</h2>
-
-        <div class="cards">
-
-            <div class="card reveal">
-                <h3>📧 Gmail</h3>
-
-                <p>
-                    <a
-                        href="https://mail.google.com/mail/?view=cm&fs=1&to=danielbpc50@gmail.com"
-                        target="_blank"
-                        class="contato-link">
-                        danielbpc50@gmail.com
+                <div class="card contact-card reveal">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>E-mail</h3>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daniellimafs01@gmail.com" target="_blank">
+                        daniellimafs01@gmail.com
                     </a>
-                </p>
-            </div>
+                </div>
 
-            <div class="card reveal">
-                <h3>📱 WhatsApp</h3>
-
-                <p>
-                    <a
-                        href="https://wa.me/5585994012461"
-                        target="_blank"
-                        class="contato-link">
-                        Falar no WhatsApp
+                <div class="card contact-card reveal">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <a href="https://wa.me/5585994012461" target="_blank">
+                        +55 (85) 99401-2461
                     </a>
-                </p>
-            </div>
+                </div>
 
-            <div class="card reveal">
-                <h3>💼 LinkedIn</h3>
-
-                <p>
-                    <a href="https://www.linkedin.com/in/daniellimma" target="_blank" class="contato-link">
+                <div class="card contact-card reveal">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <h3>LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/daniellimma" target="_blank">
                         linkedin.com/in/daniellimma
                     </a>
-                </p>
-            </div>
+                </div>
 
-            <div class="card reveal">
-                <h3>💻 GitHub</h3>
-
-                <p>
-                    <a href="https://github.com/Daniel-Limma" target="_blank" class="contato-link">
+                <div class="card contact-card reveal">
+                    <i class="fa-brands fa-github"></i>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/Daniel-Limma" target="_blank">
                         github.com/Daniel-Limma
                     </a>
-                </p>
+                </div>
+
             </div>
 
-            <div class="card reveal">
-                <h3>📍 Localização</h3>
-                <p>Fortaleza • Ceará • Brasil</p>
+        </section>
+
+        <section id="curriculo" class="section reveal">
+
+            <div class="cta-card reveal">
+
+                <div>
+                    <span>Currículo</span>
+                    <h2>Baixe meu currículo</h2>
+                    <p>
+                        Conheça minha trajetória profissional, projetos, competências técnicas
+                        e experiências na área de dados.
+                    </p>
+                </div>
+
+                <a
+                    href="imagens/Curriculo_Daniel_Fernandes_Dados.pdf"
+                    download="Daniel_Lima_Curriculo.pdf"
+                    class="btn primary">
+
+                    <i class="fa-solid fa-file-arrow-down"></i>
+                    Download do Currículo
+                </a>
+
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section id="mensagem" class="section reveal">
 
-    <section id="curriculo" class="reveal">
+            <div class="section-header">
+                <span>Mensagem</span>
+                <h2>Envie uma Mensagem</h2>
+                <p>Preencha o formulário abaixo para enviar uma mensagem diretamente para meu e-mail.</p>
+            </div>
 
-        <h2>Currículo</h2>
+            <div class="form-card reveal">
 
-        <div class="card reveal">
+                <form action="https://formsubmit.co/daniellimafs01@gmail.com" method="POST">
 
-            <p>
-                Faça o download do meu currículo para conhecer minha trajetória
-                profissional, projetos e competências técnicas.
-            </p>
+                    <input type="hidden" name="_subject" value="Nova mensagem recebida pelo Portfólio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
 
-            <br>
+                    <input type="hidden" name="_autoresponse"
+                        value="Olá! Recebi sua mensagem e retornarei em breve. Obrigado pelo contato.">
 
-            <a href="Curriculo_Daniel_Fernandes_Dados.pdf" download class="btn">
-                📄 Download do Currículo
-            </a>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input id="nome" type="text" name="Nome" placeholder="Digite seu nome" required>
+                    </div>
 
-        </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="Email" placeholder="Digite seu e-mail" required>
+                    </div>
 
-    </section>
+                    <div class="form-group">
+                        <label for="assunto">Assunto</label>
+                        <input id="assunto" type="text" name="Assunto" placeholder="Digite o assunto">
+                    </div>
 
-    <section id="mensagem" class="reveal">
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem-texto" name="Mensagem" rows="6" placeholder="Digite sua mensagem..." required></textarea>
+                    </div>
 
-        <h2>Envie uma Mensagem</h2>
+                    <button type="submit" class="btn primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Enviar Mensagem
+                    </button>
 
-        <div class="card reveal">
+                </form>
 
-            <form action="https://formsubmit.co/danielbpc50@gmail.com" method="POST">
+            </div>
 
-                <input type="hidden" name="_subject" value="Nova mensagem recebida pelo Portfólio">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://daniel-limma.github.io">
+        </section>
 
-                <input type="text" name="Nome" placeholder="Seu nome" required>
+    </main>
 
-                <br><br>
+    <a href="https://wa.me/5585994012461" target="_blank" class="whatsapp-float" aria-label="Falar no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-                <input type="email" name="Email" placeholder="Seu e-mail" required>
-
-                <br><br>
-
-                <textarea name="Mensagem" rows="6" placeholder="Digite sua mensagem..." required></textarea>
-
-                <br><br>
-
-                <button type="submit" class="btn">
-                    Enviar
-                </button>
-
-            </form>
-
-        </div>
-
-    </section>
-
-    <footer class="reveal">
+    <footer class="footer reveal">
 
         <h2>Daniel Lima</h2>
-
         <p>Analista de Business Intelligence</p>
 
-        <br>
+        <div class="footer-links">
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=daniellimafs01@gmail.com" target="_blank">
+                <i class="fa-solid fa-envelope"></i>
+                E-mail
+            </a>
 
-        <div class="links">
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=danielbpc50@gmail.com" target="_blank">Gmail</a>
-            <a href="https://wa.me/5585994012461" target="_blank">WhatsApp</a>
-            <a href="https://github.com/Daniel-Limma" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/daniellimma" target="_blank">LinkedIn</a>
+            <a href="https://wa.me/5585994012461" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <a href="https://github.com/Daniel-Limma" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/daniellimma" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+            </a>
         </div>
 
-        <br>
-
         <p>Desenvolvido com HTML5 • CSS3 • JavaScript</p>
-
-        <br>
-
         <p>© 2026 Daniel Lima. Todos os direitos reservados.</p>
 
     </footer>

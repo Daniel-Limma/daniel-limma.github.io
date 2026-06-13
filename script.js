@@ -1,28 +1,28 @@
 /*==================================================
-            PORTFÓLIO DANIEL LIMA
+            PORTFÓLIO DANIEL LIMA - JS PREMIUM
 ====================================================*/
 
 /*==============================================
         SCROLL SUAVE DO MENU
 ==============================================*/
 
-const linksMenu = document.querySelectorAll('nav a');
+const linksMenu = document.querySelectorAll('a[href^="#"]');
 
 linksMenu.forEach(link => {
-    link.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
+    link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
 
-        if (href && href.startsWith("#")) {
-            const destino = document.querySelector(href);
+        if (!href || href === "#") return;
 
-            if (destino) {
-                e.preventDefault();
+        const destino = document.querySelector(href);
 
-                destino.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
+        if (destino) {
+            e.preventDefault();
+
+            destino.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
         }
     });
 });
@@ -36,13 +36,13 @@ const navbar = document.querySelector("nav");
 if (navbar) {
     window.addEventListener("scroll", () => {
         if (window.scrollY > 80) {
-            navbar.style.background = "rgba(11,17,32,.98)";
-            navbar.style.boxShadow = "0 8px 20px rgba(0,0,0,.35)";
-            navbar.style.backdropFilter = "blur(12px)";
+            navbar.style.background = "rgba(7, 13, 24, .92)";
+            navbar.style.boxShadow = "0 20px 60px rgba(0,0,0,.45)";
+            navbar.style.borderColor = "rgba(56,189,248,.28)";
         } else {
-            navbar.style.background = "rgba(11,17,32,.90)";
-            navbar.style.boxShadow = "none";
-            navbar.style.backdropFilter = "blur(8px)";
+            navbar.style.background = "rgba(7, 13, 24, .78)";
+            navbar.style.boxShadow = "0 20px 60px rgba(0,0,0,.30)";
+            navbar.style.borderColor = "rgba(148,163,184,.18)";
         }
     });
 }
@@ -62,7 +62,7 @@ if (subtitulo) {
         if (i < textoDigitado.length) {
             subtitulo.textContent += textoDigitado.charAt(i);
             i++;
-            setTimeout(escrever, 70);
+            setTimeout(escrever, 65);
         }
     }
 
@@ -70,7 +70,7 @@ if (subtitulo) {
 }
 
 /*==============================================
-        CONTADORES COM OBSERVER
+        CONTADORES ANIMADOS
 ==============================================*/
 
 const counters = document.querySelectorAll(".stat h3");
@@ -89,7 +89,7 @@ if (counters.length > 0) {
                 const possuiMais = original.includes("+");
 
                 let atual = 0;
-                const incremento = Math.max(1, numero / 80);
+                const incremento = Math.max(1, numero / 70);
 
                 function contar() {
                     atual += incremento;
@@ -116,7 +116,7 @@ if (counters.length > 0) {
             }
         });
     }, {
-        threshold: 0.5
+        threshold: 0.45
     });
 
     counters.forEach(counter => counterObserver.observe(counter));
@@ -136,7 +136,7 @@ if (reveals.length > 0) {
             }
         });
     }, {
-        threshold: 0.15
+        threshold: 0.12
     });
 
     reveals.forEach(item => revealObserver.observe(item));
@@ -150,9 +150,16 @@ const formulario = document.querySelector("form");
 const botaoEnviar = formulario ? formulario.querySelector("button") : null;
 
 if (formulario && botaoEnviar) {
+    const textoOriginalBotao = botaoEnviar.innerHTML;
+
     formulario.addEventListener("submit", () => {
-        botaoEnviar.innerText = "Enviando...";
+        botaoEnviar.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Enviando...`;
         botaoEnviar.disabled = true;
+
+        setTimeout(() => {
+            botaoEnviar.innerHTML = textoOriginalBotao;
+            botaoEnviar.disabled = false;
+        }, 8000);
     });
 }
 
@@ -165,4 +172,37 @@ const footerTexto = document.querySelector("footer p:last-child");
 
 if (footerTexto) {
     footerTexto.innerHTML = `© ${anoAtual} Daniel Lima. Todos os direitos reservados.`;
+}
+
+/*==============================================
+        EFEITO PARALLAX LEVE NO HERO CARD
+==============================================*/
+
+const heroCard = document.querySelector(".hero-card");
+
+if (heroCard) {
+    document.addEventListener("mousemove", (e) => {
+        const x = (window.innerWidth / 2 - e.clientX) / 60;
+        const y = (window.innerHeight / 2 - e.clientY) / 60;
+
+        heroCard.style.transform = `translateY(-4px) rotateX(${y}deg) rotateY(${-x}deg)`;
+    });
+
+    document.addEventListener("mouseleave", () => {
+        heroCard.style.transform = "translateY(0) rotateX(0) rotateY(0)";
+    });
+}
+
+/*==============================================
+        BOTÃO WHATSAPP - MENSAGEM PRONTA
+==============================================*/
+
+const whatsappFloat = document.querySelector(".whatsapp-float");
+
+if (whatsappFloat) {
+    const mensagem = encodeURIComponent(
+        "Olá, Daniel! Vi seu portfólio e gostaria de conversar sobre dados/BI."
+    );
+
+    whatsappFloat.href = `https://wa.me/5585994012461?text=${mensagem}`;
 }
