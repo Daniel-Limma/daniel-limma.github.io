@@ -1134,3 +1134,120 @@ button{
         display: flex;
     }
 }
+/* ==========================================
+        FASE 1 - MELHORIAS PORTFÓLIO 9.5
+========================================== */
+
+/* STACK NO HERO */
+
+.hero-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.hero-stack span {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, .14);
+    border: 1px solid rgba(56, 189, 248, .28);
+    color: var(--cyan);
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .3px;
+    transition: .35s;
+}
+
+.hero-stack span:hover {
+    transform: translateY(-4px);
+    background: rgba(56, 189, 248, .14);
+    box-shadow: 0 0 24px rgba(56, 189, 248, .25);
+}
+
+/* SEÇÃO IMPACTO */
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.impact-card {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 34px 24px;
+    border-radius: var(--radius);
+    background: rgba(15, 23, 42, .72);
+    border: 1px solid rgba(56, 189, 248, .18);
+    box-shadow: var(--shadow);
+    transition: .35s;
+}
+
+.impact-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+}
+
+.impact-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, .45);
+    box-shadow: 0 0 55px rgba(56, 189, 248, .14);
+}
+
+.impact-card i {
+    color: var(--cyan);
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.impact-card h3 {
+    font-size: 2.8rem;
+    line-height: 1;
+    color: white;
+    margin-bottom: 14px;
+}
+
+.impact-card p {
+    color: var(--text2);
+    font-size: .95rem;
+}
+
+/* AJUSTE MENU COM MAIS LINKS */
+
+.menu {
+    gap: 18px;
+}
+
+.menu a {
+    font-size: .88rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 1100px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .hero-stack {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-stack span {
+        font-size: .78rem;
+        padding: 9px 14px;
+    }
+}
