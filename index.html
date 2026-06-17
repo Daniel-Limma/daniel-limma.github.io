@@ -11,7 +11,7 @@
     <link rel="icon" href="imagens/DL.png">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="./style.css?v=21">
+    <link rel="stylesheet" href="./style.css?v=22">
 </head>
 
 <body>
@@ -33,7 +33,9 @@
             <li><a href="#impacto">Impacto</a></li>
             <li><a href="#tecnologias">Stack</a></li>
             <li><a href="#engenharia-dados">Engenharia</a></li>
+            <li><a href="#arquitetura-dados">Arquitetura</a></li>
             <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#timeline">Timeline</a></li>
             <li><a href="#contato">Contato</a></li>
         </ul>
 
@@ -409,6 +411,38 @@
 
         </section>
 
+        <section id="arquitetura-dados" class="section reveal">
+
+            <div class="section-header">
+                <span>Arquitetura</span>
+                <h2>Arquitetura de Dados</h2>
+                <p>Projetos e práticas que conectam BI, SQL, modelagem e engenharia de dados.</p>
+            </div>
+
+            <div class="cards tech-grid">
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-warehouse"></i>
+                    <h3>Data Warehouse Financeiro</h3>
+                    <p>Estruturação de dados em PostgreSQL com tabelas fato, dimensões e preparação para consumo analítico.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3>Modelagem Dimensional</h3>
+                    <p>Organização de dados em modelo estrela para melhorar análise, desempenho e clareza nos dashboards.</p>
+                </div>
+
+                <div class="card tech-card reveal">
+                    <i class="fa-solid fa-gears"></i>
+                    <h3>ETL e Pipelines</h3>
+                    <p>Extração, transformação, limpeza e carga de dados usando SQL, Power Query, Python e ferramentas de integração.</p>
+                </div>
+
+            </div>
+
+        </section>
+
         <section id="projetos" class="section reveal">
 
             <div class="section-header">
@@ -451,10 +485,29 @@
                     <h3>Dashboard Financeiro Executivo</h3>
 
                     <p>
-                        Projeto desenvolvido para simular uma visão executiva de receitas,
-                        despesas, lucro, margem e fluxo de caixa. A proposta foi transformar
-                        dados financeiros em indicadores claros para tomada de decisão.
+                        Projeto desenvolvido para fornecer uma visão estratégica da saúde
+                        financeira da empresa por meio da análise de receitas, despesas,
+                        lucratividade, margem e fluxo de caixa.
                     </p>
+
+                    <div class="project-case">
+
+                        <div>
+                            <strong>Problema</strong>
+                            <p>Centralizar indicadores financeiros para facilitar a leitura executiva dos resultados.</p>
+                        </div>
+
+                        <div>
+                            <strong>Solução</strong>
+                            <p>Construção de dashboard em Power BI com KPIs, tratamento no Power Query, medidas DAX e storytelling visual.</p>
+                        </div>
+
+                        <div>
+                            <strong>Resultado</strong>
+                            <p>Visão clara de receita, lucro, margem e fluxo de caixa para apoiar decisões gerenciais.</p>
+                        </div>
+
+                    </div>
 
                     <div class="project-highlights">
 
@@ -499,13 +552,20 @@
                         <h3>Dashboard de Perdas</h3>
 
                         <p>
-                            Análise de perdas produtivas por turno, produto, defeito e evolução mensal,
-                            com foco em identificação de causas críticas e priorização de ações corretivas.
+                            Case industrial para identificar perdas por turno, produto, defeito e evolução mensal,
+                            apoiando priorização de ações corretivas.
                         </p>
+
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>Pareto</span>
+                            <span>Produção</span>
+                            <span>KPIs</span>
+                        </div>
 
                         <a href="#">
                             <i class="fa-solid fa-chart-line"></i>
-                            Case em construção
+                            Ver case
                         </a>
                     </div>
 
@@ -523,13 +583,20 @@
                         <h3>Dashboard Comercial</h3>
 
                         <p>
-                            Projeto para acompanhamento de vendas, ticket médio, metas,
-                            faturamento, margem e performance comercial com visão executiva.
+                            Case comercial para acompanhamento de vendas, ticket médio, metas,
+                            faturamento, margem e performance por período.
                         </p>
+
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                            <span>Vendas</span>
+                            <span>Metas</span>
+                        </div>
 
                         <a href="#">
                             <i class="fa-solid fa-code"></i>
-                            Case em construção
+                            Ver case
                         </a>
                     </div>
 
@@ -547,17 +614,56 @@
                         <h3>Data Warehouse Financeiro</h3>
 
                         <p>
-                            Estruturação de dados financeiros em modelo analítico com tabelas fato,
-                            dimensões, indicadores e preparação para consumo em dashboards.
+                            Projeto de modelagem analítica em PostgreSQL com estrutura de DW,
+                            tabelas fato, dimensões e preparação para dashboards.
                         </p>
+
+                        <div class="project-tags">
+                            <span>PostgreSQL</span>
+                            <span>DW</span>
+                            <span>Star Schema</span>
+                            <span>SQL</span>
+                        </div>
 
                         <a href="#">
                             <i class="fa-solid fa-database"></i>
-                            Em desenvolvimento
+                            Ver estrutura
                         </a>
                     </div>
 
                 </article>
+
+            </div>
+
+        </section>
+
+        <section id="timeline" class="section reveal">
+
+            <div class="section-header">
+                <span>Evolução</span>
+                <h2>Timeline Profissional</h2>
+                <p>Minha evolução prática entre análise de dados, BI e engenharia de dados.</p>
+            </div>
+
+            <div class="timeline-grid">
+
+                <div class="timeline-card reveal">
+                    <span>2024</span>
+                    <h3>Analista de Dados</h3>
+                    <p>Atuação com relatórios, tratamento de dados, automação, dashboards e indicadores.</p>
+                </div>
+
+                <div class="timeline-card reveal">
+                    <span>2025</span>
+                    <h3>Projetos de BI</h3>
+                    <p>Construção de dashboards financeiros, comerciais, RH, produção e análises executivas.</p>
+                </div>
+
+                <div class="timeline-card reveal">
+                    <span>2026</span>
+                    <h3>Engenharia de Dados</h3>
+                    <p>Evolução em SQL, PostgreSQL, modelagem dimensional, ETL, Git e pipelines de dados.</p>
+                </div>
 
             </div>
 
