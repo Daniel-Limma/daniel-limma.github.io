@@ -1472,3 +1472,63 @@ button{
         grid-template-columns:1fr;
     }
 }
+/* ==========================================
+        TIMELINE PREMIUM
+========================================== */
+
+.timeline-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+.timeline-card{
+    position:relative;
+    padding:30px;
+    border-radius:26px;
+    background:rgba(15,23,42,.72);
+    border:1px solid rgba(56,189,248,.16);
+    transition:.35s;
+    overflow:hidden;
+}
+
+.timeline-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:3px;
+    background:linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--purple)
+    );
+}
+
+.timeline-card:hover{
+    transform:translateY(-10px);
+    border-color:rgba(56,189,248,.45);
+    box-shadow:0 0 45px rgba(56,189,248,.15);
+}
+
+.timeline-card span{
+    color:var(--cyan);
+    font-size:1.2rem;
+    font-weight:900;
+}
+
+.timeline-card h3{
+    margin:14px 0;
+}
+
+.timeline-card p{
+    color:var(--text2);
+}
+
+@media(max-width:900px){
+
+    .timeline-grid{
+        grid-template-columns:1fr;
+    }
+}
