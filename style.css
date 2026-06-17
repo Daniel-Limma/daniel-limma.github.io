@@ -1472,10 +1472,73 @@ button{
         grid-template-columns:1fr;
     }
 }
+
 /* ==========================================
-        TIMELINE PREMIUM
+        FASE 3 - FINALIZAÇÃO NOTA 10
 ========================================== */
 
+/* AJUSTE DO MENU FINAL */
+.menu{
+    gap:14px;
+}
+
+.menu a{
+    font-size:.82rem;
+}
+
+/* BOTÃO DASHBOARD ONLINE EM PREPARAÇÃO */
+.dashboard-soon{
+    position:relative;
+    opacity:.92;
+}
+
+.dashboard-soon::after{
+    content:"Power BI";
+    position:absolute;
+    top:-10px;
+    right:10px;
+    padding:3px 8px;
+    border-radius:999px;
+    background:rgba(56,189,248,.18);
+    border:1px solid rgba(56,189,248,.35);
+    color:var(--cyan);
+    font-size:.62rem;
+    font-weight:900;
+    letter-spacing:.4px;
+}
+
+/* PROJETOS EM NÚMEROS */
+.project-number-card{
+    position:relative;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.project-number-card::before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+}
+
+.project-number-card:hover{
+    transform:translateY(-8px);
+    border-color:rgba(56,189,248,.45);
+    box-shadow:0 0 45px rgba(56,189,248,.14);
+}
+
+.project-number-card i{
+    color:var(--cyan);
+    font-size:2rem;
+    margin-bottom:14px;
+}
+
+.project-number-card p{
+    color:var(--text2);
+}
+
+/* TIMELINE EM CARDS */
 .timeline-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -1490,6 +1553,7 @@ button{
     border:1px solid rgba(56,189,248,.16);
     transition:.35s;
     overflow:hidden;
+    box-shadow:var(--shadow);
 }
 
 .timeline-card::before{
@@ -1499,11 +1563,7 @@ button{
     left:0;
     right:0;
     height:3px;
-    background:linear-gradient(
-        90deg,
-        var(--cyan),
-        var(--purple)
-    );
+    background:linear-gradient(90deg,var(--cyan),var(--purple));
 }
 
 .timeline-card:hover{
@@ -1513,22 +1573,151 @@ button{
 }
 
 .timeline-card span{
+    display:inline-block;
     color:var(--cyan);
-    font-size:1.2rem;
+    font-size:1.15rem;
     font-weight:900;
+    margin-bottom:10px;
 }
 
 .timeline-card h3{
-    margin:14px 0;
+    margin-bottom:12px;
+    color:white;
 }
 
 .timeline-card p{
     color:var(--text2);
 }
 
-@media(max-width:900px){
+/* CTA RECRUTADOR */
+.recruiter-cta{
+    display:grid;
+    grid-template-columns:1.3fr .7fr;
+    gap:34px;
+    align-items:center;
+    padding:38px;
+    border-radius:32px;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(56,189,248,.18),transparent 32%),
+        linear-gradient(135deg,rgba(37,99,235,.18),rgba(139,92,246,.10)),
+        rgba(15,23,42,.78);
+    border:1px solid rgba(56,189,248,.22);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    position:relative;
+}
 
-    .timeline-grid{
+.recruiter-cta::before{
+    content:"";
+    position:absolute;
+    inset:0 0 auto 0;
+    height:1px;
+    background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+}
+
+.recruiter-content span{
+    color:var(--cyan);
+    font-weight:900;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-size:.78rem;
+}
+
+.recruiter-content h2{
+    font-size:clamp(2rem,4vw,3rem);
+    line-height:1.1;
+    margin:10px 0 14px;
+}
+
+.recruiter-content p{
+    color:var(--text2);
+    max-width:720px;
+}
+
+.recruiter-points{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:22px;
+}
+
+.recruiter-points span{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 13px;
+    border-radius:999px;
+    color:var(--text2);
+    background:rgba(37,99,235,.12);
+    border:1px solid rgba(56,189,248,.22);
+    font-size:.82rem;
+}
+
+.recruiter-points i{
+    color:var(--cyan);
+}
+
+.recruiter-actions{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.recruiter-actions .btn{
+    width:100%;
+}
+
+/* REFORÇO VISUAL DOS CARDS DE CASE */
+.projeto{
+    border:1px solid rgba(56,189,248,.18);
+}
+
+.projeto:hover{
+    box-shadow:0 0 55px rgba(56,189,248,.12);
+}
+
+.project-content .project-tags{
+    margin-bottom:18px;
+}
+
+/* RESPONSIVO FINAL */
+@media(max-width:1100px){
+    .menu{
+        gap:10px;
+    }
+
+    .menu a{
+        font-size:.78rem;
+    }
+}
+
+@media(max-width:900px){
+    .timeline-grid,
+    .recruiter-cta{
         grid-template-columns:1fr;
+    }
+
+    .recruiter-actions{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+
+    .recruiter-actions .btn{
+        width:auto;
+        flex:1;
+    }
+}
+
+@media(max-width:600px){
+    .recruiter-cta{
+        padding:24px;
+    }
+
+    .recruiter-actions{
+        flex-direction:column;
+    }
+
+    .recruiter-actions .btn{
+        width:100%;
     }
 }
